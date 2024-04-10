@@ -31,19 +31,17 @@ public class ProductserviceApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-//		Category category = new Category();
-//		category.setName("Electronic Devices");
-//		Category saveCategory=categotyRepository.save(category);
-//		Product product= new Product();
-//		Price price = new Price();
-//		price.setPrice(10000.0);
-//		price.setCurrency("USD");
-//		this.priceRepository.save(price);
-//		product.setPrice(price);
-//		product.setTitle("Iphone 15");
-//		product.setImage("https/google.com");
-//		product.setDescription("Best Iphone in this Category");
-//		product.setCategory(saveCategory);
-//		productRepository.save(product);
+		Category category = new Category();
+		category.setName("Electronic Devices");
+		Product product= new Product();
+		Price price = new Price();
+		price.setPrice(10000.0);
+		price.setCurrency("USD");
+		product.setPrice(price);
+		product.setTitle("Iphone 15");
+		product.setImage("https/google.com");
+		product.setDescription("Best Iphone in this Category");
+		product.setCategory(category);
+		productRepository.save(product);
 	}
 }
