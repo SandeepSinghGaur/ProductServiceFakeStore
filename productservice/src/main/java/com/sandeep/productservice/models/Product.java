@@ -1,7 +1,6 @@
 package com.sandeep.productservice.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,6 +16,8 @@ public class Product extends BaseModel{
     private String description;
     private String image;
     @ManyToOne
+    @JoinColumn(name = "Category")
     private Category category;
-    private Double price;
+    @OneToOne
+    private Price price = new Price();
 }
